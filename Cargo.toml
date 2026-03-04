@@ -1,0 +1,70 @@
+[workspace]
+members = [
+    "dreamhack_utils",
+    "*/solver"
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Woojin Lee"]
+
+# https://github.com/alloy-rs/examples/blob/main/Cargo.toml
+[workspace.dependencies]
+alloy = { version = "1.1.0", features = [
+    "eips",
+    "ens",
+    "full",
+    "json-rpc",
+    "node-bindings",
+    "rpc-client",
+    "rpc-types-debug",
+    "rpc-types-trace",
+    "signer-aws",
+    "signer-gcp",
+    "signer-keystore",
+    "signer-ledger",
+    "signer-mnemonic",
+    "signer-trezor",
+    "signer-yubihsm",
+    "kzg",
+] }
+alloy-chains = "0.2.17"
+
+# async
+futures-util = "0.3"
+tokio = {version="1.48", features = ["full"]}
+
+# misc
+eyre = "0.6"
+serde = "1.0"
+serde_json = "1.0"
+
+# benchmarking
+criterion = "0.5"
+ethers = "2.0.14"
+
+# rand
+rand = "0.8.5"
+
+# additional dependencies
+chrono = "0.4"
+clap = "4.5"
+reqwest = "0.12.24"
+tower = "0.5"
+http-body-util = "0.1"
+tracing-subscriber = "0.3"
+aws-config = { version = "1.8", default-features = false }
+aws-sdk-kms = { version = "1.77", default-features = false }
+gcloud-sdk = "0.27"
+tempfile = "3.23"
+foundry-fork-db = "0.19"
+alloy-evm = "0.22"
+revm = { version = "30", default-features = false }
+ethabi = "18"
+rlp = "0.6.1"
+rlp-derive = "0.2.0"
+alloy-rlp = "0.3.12"
+
+dreamhack_utils = { path = "dreamhack_utils" }

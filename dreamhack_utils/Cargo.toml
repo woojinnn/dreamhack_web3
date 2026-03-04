@@ -1,0 +1,17 @@
+[package]
+name = "dreamhack_utils"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[features]
+default = []
+build-tools = ["dep:eyre"]
+challenge-info = ["dep:eyre", "dep:reqwest", "dep:serde_json"]
+forge-runtime = ["dep:alloy", "dep:eyre"]
+
+[dependencies]
+alloy = { workspace = true, optional = true }
+eyre = { workspace = true, optional = true }
+reqwest = { workspace = true, optional = true, features = ["json"] }
+serde_json = { workspace = true, optional = true }

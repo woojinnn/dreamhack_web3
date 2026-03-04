@@ -1,0 +1,10 @@
+[package]
+name = "sc_make_boko_winner"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+alloy.workspace = true
+tokio.workspace = true
+eyre.workspace = true
+dreamhack_utils = { workspace = true, features = ["challenge-info", "forge-runtime"] }
