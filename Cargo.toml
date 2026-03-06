@@ -2,7 +2,7 @@
 members = [
     "dreamhack_utils",
     "*/solver"
-, "dreamidle/d57663bc-4e7c-46f2-ab45-2cf04ff7a47a/dreamidle", "excellent_member/excellent_member"]
+, "dreamidle/d57663bc-4e7c-46f2-ab45-2cf04ff7a47a/dreamidle", "excellent_member/excellent_member", "erc1337/erc1337"]
 resolver = "2"
 
 [workspace.package]
