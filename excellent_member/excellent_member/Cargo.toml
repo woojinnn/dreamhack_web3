@@ -1,0 +1,11 @@
+[package]
+name = "excellent_member"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
+alloy.workspace = true
+tokio.workspace = true
+eyre.workspace = true
+dreamhack_utils = { workspace = true, features = ["challenge-info", "forge-runtime"] }
